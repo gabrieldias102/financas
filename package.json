@@ -1,0 +1,36 @@
+{
+  "name": "financas",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "node --env-file-if-exists=.env.local ./node_modules/drizzle-kit/bin.cjs migrate",
+    "testar-pluggy": "node --env-file-if-exists=.env.local --import tsx scripts/testar-pluggy.mts"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.45.3",
+    "next": "16.3.8",
+    "pluggy-sdk": "0.90.0",
+    "postgres": "3.4.9",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.8",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "drizzle-kit": "0.31.11",
+    "tsx": "4.23.15"
+  }
+}
